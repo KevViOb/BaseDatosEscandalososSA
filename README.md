@@ -104,7 +104,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=$MSSQL_SA_PASSWORD" -p 1433:
 
 Después de ejecutar `Escandalosos_Final.sql` completo: Persona con 46 filas y Cliente con 21 (por el alta de prueba del procedimiento `sp_RegistrarCliente`), Cita con 21, Factura con 21, DetalleFactura con 28, una fila nueva en `AuditoriaPrecioServicio`, y el stock del medicamento con id 5 bajando de 18 a 17 unidades. Deben existir 18 tablas (las 17 del modelo lógico más la de auditoría), 5 vistas, 3 procedimientos almacenados y 3 triggers en la base `EscandalososSA`.
 
-Los scripts se validaron programáticamente antes de publicar este repositorio: integridad referencial, aritmética de facturación, arco exclusivo, ausencia de choques de agenda en la carga y ausencia de líneas de guiones decorativas. La ejecución real en una instancia de SQL Server no se pudo verificar al preparar este repositorio; si la ejecutas y encuentras algún error, no dudes en abrir un issue.
+Los scripts se validaron programáticamente antes de publicar este repositorio: integridad referencial, aritmética de facturación, arco exclusivo, ausencia de choques de agenda en la carga y ausencia de líneas de guiones decorativas. Además, ambos scripts (`Escandalosos_Avance2.sql` y `Escandalosos_Final.sql`) se ejecutaron completos en una instancia real de SQL Server 2022 sobre Docker, sin errores, y los resultados obtenidos coincidieron exactamente con los esperados en la tabla anterior.
 
 ## Cómo regenerar los artefactos
 
