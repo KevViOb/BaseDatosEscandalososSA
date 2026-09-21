@@ -1,0 +1,8 @@
+# Los scripts de src/ solo usan la biblioteca estandar de Python 3.
+# No hay dependencias externas de Python que instalar.
+#
+# gen_diagramas.py si depende de Graphviz instalado en el sistema
+# (el ejecutable "dot" debe estar disponible en el PATH).
+# En Windows: winget install Graphviz.Graphviz
+# En Debian o Ubuntu: apt install graphviz
+# En macOS: brew install graphviz
